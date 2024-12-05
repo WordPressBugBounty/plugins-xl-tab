@@ -8,7 +8,8 @@ class xltab_helper {
    static function xltab_drop_posts($post_type){ 
         $args = array(
           'numberposts' => -1,
-          'post_type'   => $post_type
+          'post_type'   => $post_type,
+          'post_status' => 'publish'
         );
 
         $posts = get_posts( $args );        
